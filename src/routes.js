@@ -5,6 +5,7 @@ import Dashboard from './components/Dashboard';
 import CreateProject from './components/CreateProject';
 import ProjectList from './components/ProjectList';
 import Navbar from './components/Navbar';
+import GitHubCallback from './components/GitHubCallback';
 import { useState } from 'react';
 
 const AppRoutes = () => {
@@ -23,6 +24,7 @@ const AppRoutes = () => {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/create-project" element={<CreateProject addProject={addProject} />} />
         <Route path="/project-list" element={<ProjectList projects={projects} />} />
+        <Route path="/auth/callback" element={<GitHubCallback setUser={setUser} />} />
       </Routes>
     </Router>
   );
